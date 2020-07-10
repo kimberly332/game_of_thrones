@@ -1,1 +1,2 @@
-# wang_sl_GOT
+# GOT_video
+Update this with a proper readme doc
