@@ -33,10 +33,15 @@ main {
 	height:360px;
 	background-color:grey;
 	margin:0 auto;
-	/*overflow:hidden;*/
+	overflow:hidden;
 }
 
-#houseImages { position:relative; width:4000px; transition: all .5s; }
+#houseImages {
+  position:relative;
+  width:5400px;
+  transition: all .5s;
+}
+
 #houseImages img { float:left; }
 
 #bottomNav { margin-top:30px; }
@@ -134,10 +139,19 @@ main {
   display: block;
 }
 
+.house-info {
+  width: 70%;
+  margin: 0 auto;
+  color: white;
+  font-size: 1em;
+  line-height: 26px;
+  margin-top: 1em;
+}
+
 
 video {
 	width: 80%;
-	margin-top: 10%;
+	margin-top: 30%;
 	border: thin solid #949393;
 }
 
