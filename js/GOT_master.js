@@ -125,4 +125,12 @@
 
   // add an "ended" event handler for the video -> close the lightBox
   lbVideo.addEventListener("ended", showHideLightbox);
+
+  // auto close the lightbox when the video is finished
+  document.getElementById('autoplay').addEventListener('ended', closeLightbox, false);
+    function closeLightbox() {
+      lightBox.classList.remove("show-lightbox");
+      lbVideo.currentTime = 0;
+      lbVideo.pause();
+  }
 })();
