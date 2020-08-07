@@ -131,3 +131,9 @@ video {
 	margin-top: 10%;
 	border: thin solid #949393;
 }
+
+.vid-controls i {
+  font-size: 3em;
+  color: white;
+  cursor: pointer;
+}

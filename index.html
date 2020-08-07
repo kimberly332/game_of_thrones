@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DOM Traversal</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
 <link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
 </head>
@@ -11,16 +12,25 @@
     <main>
     <section class="lightbox">
       <span class="close-lb">x</span>
+
+      <!-- custom video controls -->
+      <section class="vid-controls">
+        <i class="fas fa-play-circle"></i>
+        <i class="fas fa-backward"></i>
+      </section>
+      <!-- end custom video controls -->
+
+      <video src="video/House-Stark.mp4" controls></video>
     </section>
 
     <section id="imageContainer">
     	<div id="houseImages"> <!-- add in all of the images to make a scrolling "banner" -->
-    		<img src="images/stark.jpg"/>
-    		<img src="images/baratheon.jpg"/>
-    		<img src="images/lannister.jpg"/>
-    		<img src="images/tully.jpg"/>
-    		<img src="images/greyjoy.jpg"/>
-    		<img src="images/arryn.jpg"/>
+    		<img src="images/stark.jpg" alt="Stark Image">
+    		<img src="images/baratheon.jpg" alt="Baratheon Image">
+    		<img src="images/lannister.jpg" alt="Lannister Image">
+    		<img src="images/tully.jpg" alt="Tully Image">
+    		<img src="images/greyjoy.jpg" alt="Greyjoy Image">
+    		<img src="images/arryn.jpg" alt="Arryn Image">
         </div>
     </section>
 
