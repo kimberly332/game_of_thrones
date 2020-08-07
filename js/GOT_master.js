@@ -56,7 +56,7 @@
     }
     // rewind the video and make it pause at currentTime of 0
   }
-  
+
   function animateBanner() {
     // let bannerNum = this.dataset.offset;
     // console.log(bannerNum * 600);
@@ -117,11 +117,6 @@
   })
 
   sigils.forEach(sigil => sigil.addEventListener("click", animateBanner));
-
-  sigils.forEach(sigil => sigil.addEventListener("click", showHideLightbox));
-  // sigils.forEach(sigil => sigil.addEventListener("click", showHideLightbox));
-
-
   lbClose.addEventListener("click", showHideLightbox);
 
   // add an "ended" event handler for the video -> close the lightBox
