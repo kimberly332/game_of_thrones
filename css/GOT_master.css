@@ -38,7 +38,7 @@ main {
 
 #houseImages {
   position:relative;
-  width:4000px; /* this might need to be bigger */
+  width:5400px;
   transition: all .5s;
 }
 
@@ -85,6 +85,15 @@ main {
 
 .arryn { background-position:-253px -54px; }
 .arryn:hover { background-position:-253px 0px; }
+
+.targaryen { background-position:-303px -54px; }
+.targaryen:hover { background-position:-303px 0px; }
+
+.tyrell { background-position:-353px -54px; }
+.tyrell:hover { background-position:-353px 0px; }
+
+.frey { background-position: -403px -54px; }
+.frey:hover { background-position: -403px 0px; }
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
