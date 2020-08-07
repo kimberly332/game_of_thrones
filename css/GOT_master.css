@@ -151,12 +151,39 @@ main {
 
 video {
 	width: 80%;
-	margin-top: 30%;
+	/* margin-top: 10%; */
 	border: thin solid #949393;
 }
+
+#grid-container {
+	display: grid;
+	grid-template-columns: repeat(19, 1fr);
+}
+
+#play {
+  grid-column: 3/4;
+}
+
+#pause {
+  grid-column: 4/5;
+}
+
+#mute {
+  grid-column: 16/17;
+}
+
+#down {
+  grid-column: 17/18;
+}
+
+#up {
+  grid-column: 18/19;
+}
+
 
 .vid-controls i {
   font-size: 3em;
   color: white;
   cursor: pointer;
+  margin: 10px;
 }

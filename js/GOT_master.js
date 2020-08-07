@@ -34,6 +34,9 @@
       ["Frey", `House Frey of the Twins is the former Great House of the Riverlands, having gained their position for their treachery against their former liege lords, House Tully, who were stripped of all their lands and titles for their rebellion against the Iron Throne; House Tully had supported the independence movement for the Kingdom of the North. The current head of the house is unknown following the assassinations of Lord Walder Frey and two of his sons, Lothar Frey and Walder Rivers, by the vengeful Arya Stark. This is made more complex by the subsequent assassination of all male Freys soon after. After the defeat of Cersei Lannister, Edmure Tully took back his title of Lord of the Riverlands and Riverrun became the Great House of the Riverlands again.`]
     ]
 
+    var play = document.getElementById("play"),
+        pause = document.getElementById("pause");
+
   function showHideLightbox() {
     lightBox.classList.toggle('show-lightbox');
 
@@ -41,8 +44,9 @@
     // check the play state of the video.
     // if it's paused or not playing, that means we just onpened the lightBox
     // and we want the video to play
+
     if (lbVideo.paused) {
-      lbVideo.play();
+      document.getElementById('autoplay').play();
     }
     else {
       // lightBox is open and we want the video to rewind and stop when we close it.
@@ -64,11 +68,58 @@
     // and also show the house house name
     houseName.textContent = `House ${houseInfo[this.dataset.offset][0]}`;
     houseBio.textContent = `House ${houseInfo[this.dataset.offset][1]}`;
+
+    // control the timing between animating banner and showing lightbox
+    TweenMax.to(houseImages, 0.8, {right: houseImages.style.right}).eventCallback("onComplete", showHideLightbox);
   }
 
+  // custom buttons control function
+  play.addEventListener("click", function() {
+    lbVideo.play();
+
+    // update the button text to 'Pause'
+    play.classList.toggle('pause');
+  })
+  pause.addEventListener("click", function() {
+    lbVideo.pause();
+
+    // update the button text to 'Play'
+   pause.classList.toggle('pause');
+  })
+
+  // mute volume function
+  mute.addEventListener("click", function() {
+    lbVideo.muted = true;
+  })
+
+  // half volume function
+  down.addEventListener("click", function() {
+    // if the muted function is activated, then first turn off the mute mode then make it half volume of the original volume
+    if(lbVideo.muted = true) {
+      lbVideo.muted = false;
+      lbVideo.volume = 0.2;
+    }
+    else { // else set to half volume
+      lbVideo.volume = 0.2;
+    }
+  })
+
+  // full volume function
+  up.addEventListener("click", function() {
+    if(lbVideo.muted = true) {
+      lbVideo.muted = false;
+      lbVideo.volume = 1.0;
+    }
+    else { // else set to full volume
+      lbVideo.volume = 1.0;
+    }
+  })
+
   sigils.forEach(sigil => sigil.addEventListener("click", animateBanner));
+
   sigils.forEach(sigil => sigil.addEventListener("click", showHideLightbox));
   // sigils.forEach(sigil => sigil.addEventListener("click", showHideLightbox));
+
 
   lbClose.addEventListener("click", showHideLightbox);
 
