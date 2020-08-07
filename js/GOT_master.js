@@ -39,14 +39,15 @@
 
   function showHideLightbox() {
     lightBox.classList.toggle('show-lightbox');
-
+    let status = document.querySelector(".show-lightbox");
     // try making the video play as well
     // check the play state of the video.
     // if it's paused or not playing, that means we just onpened the lightBox
     // and we want the video to play
 
-    if (lbVideo.paused) {
-      document.getElementById('autoplay').play();
+
+    if (lbVideo.paused && status) {
+      lbVideo.play();
     }
     else {
       // lightBox is open and we want the video to rewind and stop when we close it.
