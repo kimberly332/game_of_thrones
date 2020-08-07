@@ -14,13 +14,16 @@
       <span class="close-lb">x</span>
 
       <!-- custom video controls -->
-      <section class="vid-controls">
-        <i class="fas fa-play-circle"></i>
-        <i class="fas fa-backward"></i>
+      <section class="vid-controls" id="grid-container">
+        <i class="fas fa-play-circle" id="play"></i>
+        <i class="fas fa-pause" id="pause"></i>
+        <i class="fas fa-volume-mute" id="mute"></i>
+        <i class="fas fa-volume-down" id="down"></i>
+        <i class="fas fa-volume-up" id="up"></i>
       </section>
       <!-- end custom video controls -->
 
-      <video src="video/House-Stark.mp4" controls></video>
+      <video id="autoplay" src="video/House-Stark.mp4" controls></video>
     </section>
 
     <section id="imageContainer">
@@ -58,6 +61,7 @@
 
 </main>  <!--end mainContainer-->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 <script src="js/GOT_master.js"></script>
 </body>
 </html>
