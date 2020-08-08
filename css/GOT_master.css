@@ -53,6 +53,10 @@ main {
 	cursor:pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 /* ----- end default styles ----- */
 
 /* ----- image sprite ----- */
